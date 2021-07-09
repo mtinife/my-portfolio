@@ -1,0 +1,113 @@
+/* INIT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+/* END -INIT */
+
+/* FONTS */
+:root {
+    --main-font: 'Bebas Neue', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --sub-font: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* END - FONTS */
+
+/* COLOR */
+:root {
+    --dark-bg: rgba(18, 18, 18, 0.45);
+    --text: rgba(239, 239, 239);
+    --grey: rgba(112, 112, 122, 0.3);
+}
+/* END - COLOR */
+
+/* VARIABLES */
+/* END - VARIABLES */
+
+/* BUTTON */
+/* END - BUTTON */
+
+/* BACKGROUND */
+.allBackground {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+
+.allBackground div:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.allBackground div:nth-child(1) img {
+    background: cover no-repeat center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.allBackground div:nth-child(2) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.allBackground div:nth-child(2) img {
+    height: 100vh;
+}
+
+.allBackground div:nth-child(3) {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: var(--dark-bg);
+    width: 100vw;
+    height: 100vh;
+}
+/* END - BACKGROUND */
+
+/* NAV */
+.navigation {
+    position: fixed;
+    width: 100%;
+}
+
+.navigation nav ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation nav ul li {
+    list-style: none;
+    text-align: center;
+    background-color: var(--dark-bg);
+    border: 1px solid var(--grey);
+}
+
+.navigation nav ul li a {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text);
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    padding: 15px;
+    letter-spacing: 1.5px;
+}
+/* END - NAV */
+
+/* HERO */
+/* END - HERO */
+
+/* PROJECT */
+/* END - PROJECT */
+
+/* PROJECT CARD */
+/* END - PROJECT CARD */
+
+/* ABOUT */
+/* END - ABOUT */
+
+/* CONTACT */
+/* END - CONTACT */
