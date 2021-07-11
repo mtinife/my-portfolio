@@ -11,12 +11,17 @@
 :root {
     --main-font: 'Bebas Neue', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --sub-font: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --main-header: calc(218px + (230 - 218) * ((100vw - 300px) / (1600 - 300)));
+    --main-paragraph: calc(50px + (62 - 50) * ((100vw - 300px) / (1600 - 300)));
+    --main-button: calc(26px + (38 - 26) * ((100vw - 300px) / (1600 - 300)));
+    --main-space: 14px;
 }
 /* END - FONTS */
 
 /* COLOR */
 :root {
     --dark-bg: rgba(18, 18, 18, 0.45);
+    --darker-bg: rgba(18, 18, 18, 0.80);
     --text: rgba(239, 239, 239);
     --grey: rgba(112, 112, 122, 0.3);
 }
@@ -57,7 +62,7 @@
 
 .allBackground div:nth-child(3) {
     grid-area: 1 / 1 / 2 / 2;
-    background-color: var(--dark-bg);
+    background-color: var(--darker-bg);
     width: 100vw;
     height: 100vh;
 }
@@ -101,11 +106,12 @@
 .hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 40px;
-    grid-row-gap: 40px; 
+    grid-template-rows: 1fr 1fr 0.2fr 0.1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 5px; 
     color: var(--text);
     font-family: var(--main-font);
+    padding: 8rem 1rem 0rem;
 }
 
 .hero div:nth-child(1) {
@@ -113,11 +119,21 @@
 }
 
 .hero div:nth-child(1) h1 {
-    font-size: 20rem;
+    display: flex;
+    justify-content: end;
+    font-size: var(--main-header);
+    letter-spacing: var(--main-space);
 }
 
 .hero div:nth-child(2) {
     grid-area: 1 / 2 / 2 / 3;
+}
+
+.hero div:nth-child(2) p {
+    font-size: var(--main-paragraph);
+    font-family: var(--sub-font);
+    font-weight: 100;
+    text-align: center;
 }
 
 .hero div:nth-child(3) {
@@ -125,19 +141,63 @@
 } 
 
 .hero div:nth-child(3) h1 {
-    font-size: 10rem;
+    font-size: var(--main-header);
+    letter-spacing: var(--main-space);
 }
 
 .hero div:nth-child(4) {
     grid-area: 3 / 1 / 4 / 3;
-} 
+    display: flex;
+}
+
+.hero div:nth-child(4) div a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: var(--main-button);
+    margin-right: 70px;
+    border-bottom: 2px solid var(--text);
+}
 
 .hero div:nth-child(5) {
     grid-area: 4 / 1 / 5 / 3;
 } 
+
+.hero div:nth-child(5) i {
+    float: right;
+    font-size: 2rem;
+}
 /* END - HERO */
 
 /* PROJECT */
+.projects {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.projects > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--grey);
+}
+
+.projects > div:nth-child(2) div div:nth-child(2){
+    padding: 40px;
+    line-height: 20px;
+}
+
+.projects > div:nth-child(2) div div {
+    border: 1px solid var(--grey);
+    line-height: 0;
+}
+
+.projects div:nth-child(2) div div img {
+    width: 100%;
+}
 /* END - PROJECT */
 
 /* PROJECT CARD */
